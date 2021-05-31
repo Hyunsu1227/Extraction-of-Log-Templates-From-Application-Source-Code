@@ -1,0 +1,5 @@
+f=open("hi",'w')
+f.write("hiih")
+f=open("good",'w')
+f=open('haha','w')
+f=open('hi','w')

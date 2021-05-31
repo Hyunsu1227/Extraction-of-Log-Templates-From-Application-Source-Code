@@ -1,0 +1,67 @@
+***********AbfsClient.java***********
+
+Returning success response from rename idempotency logic 
+Returning success response from append blob idempotency code 
+Returning success response from delete idempotency logic 
+Using cached SAS token. 
+Initializing DelegatingSSLSocketFactory with * SSL  Channel Mode 
+NonCritFailure: DelegatingSSLSocketFactory Init failed :  * 
+Rename source queryparam added * 
+Fetch SAS token for * on * 
+SAS token fetch complete for * on * 
+***********AbfsConfiguration.java***********
+
+ClientCredsTokenProvider initialized 
+UserPasswordTokenProvider initialized 
+MsiTokenProvider initialized 
+RefreshTokenBasedTokenProvider initialized 
+Initializing * 
+* init complete 
+Initializing * 
+* init complete 
+***********AbfsHttpHeader.java***********
+
+***********AbfsHttpOperation.java***********
+
+***********BackupImage.java***********
+
+Formatting ... 
+Logs rolled while catching up to current segment 
+Stopped applying edits to prepare for checkpoint. 
+Waiting until the NameNode rolls its edit logs in order  to freeze the BackupNode namespace. 
+BackupNode namespace frozen. 
+Storage directory  * is not formatted. 
+data: *
+Unable to find stream starting with  *. This indicates that there is an error in synchronization in BackupImage 
+Successfully synced BackupNode with NameNode at txnid  *
+Got journal,  state =  *; firstTxId =  *; numTxns =  *
+Loading edits into backupnode to try to catch up from txid  * to  *
+Going to finish converging with remaining  * txns from in-progress stream  *
+State transition  * ->  *
+***********context.py***********
+
+No cells are configured, unable to continue 
+Error gathering result from cell * 
+Timed out waiting for response from cell * 
+***********cyborg.py***********
+
+Binding ARQs. 
+Creating ARQs for device profile * 
+Failed to delete ARQs * 
+*: * 
+***********manager.py***********
+
+***********policy.py***********
+
+Policy not registered 
+The user_id attribute isn't supported in the rule '*'.  All the user_id based policy enforcement will be removed in  the future. 
+Policy check for * failed with scope check  * 
+Policy check for * failed with credentials  * 
+Start using the new action '*'.  The existing action '*' is being deprecated  and will be removed in future release. 
+***********wsgi.py***********
+
+Stopping WSGI server. 
+WSGI server has stopped. 
+Could not bind to *:* 
+* listening on *:* 
+Failed to start * on *:* with  SSL support 

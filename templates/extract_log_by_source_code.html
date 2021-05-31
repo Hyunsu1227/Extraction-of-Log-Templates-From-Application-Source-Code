@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>Long Polling Sample Code</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/static/css/styles2.css?ver=14" />
+    <link rel="stylesheet" type="text/css" href="/static/css/filebox.css?ver=8" />
+
+</head>
+
+
+
+<body>
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Title</a>
+        <button class="openbtn" id="sidebarToggle" href="#">☰
+            <i class="fas fa-bars"></i></button>
+
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <!-- <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="layout-static.html">Static Navigation</a>
+                                <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+                            </nav>
+                        </div> -->
+
+                        <div class="sb-sidenav-menu-heading">MENU</div>
+                        <a class="nav-link" href="/">
+                            <div class="sb-nav-link-icon"><i class="fas fas fa-database"></i></div>
+                            Source code
+                        </a>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    <h1 class="mt-4">MAIN</h1>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <p class="mb-0">
+                                <code>Source Code를 사용해서 LogTemplate을 생성</code>하는 단계입니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="mb-2">
+                                        <div class="card-body">
+                                            <p id="data">내부에 올라갈 파일들을 선택하세요. <br></p>
+                                            <form name="uploadForm" id="uploadForm" enctype="multipart/form-data"
+                                                method="post">
+                                                <table class="table" width="100%" border="1px">
+                                                    <tbody id="fileTableTbody">
+                                                        <tr>
+                                                            <td id="dropZone">
+                                                                파일을 드래그 앤 드랍 하세요.
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <div class="filebox" style="position:relative">
+                                                    <label class="btn btn-primary" for="fileUpload">파일 찾아보기</label>
+                                                    <input type="file" id="fileUpload" name="file" multiple>
+                                                    <p onclick="uploadFile(); return false;" class="btn btn-primary"
+                                                        style="position: absolute; right:0">저장</p>
+                                                </div>
+
+                                            </form>
+                                            <br>
+
+                                            <p id="data">source code를 선택해주세요. <br></p>
+                                            <div id="upload-file-list" class="border">
+
+                                            </div>
+                                            <br>
+                                            <form name="form" method="post" style="position:relative">
+                                                <input type="button" class="btn btn-primary" id="execute"
+                                                    value="execute">
+                                                <input type="button" class="btn btn-primary" id="allselect"
+                                                    value="전체 선택">
+                                                <input type="button" class="btn btn-primary" id="viewFileContent"
+                                                    value="파일 내용 탭">
+                                                <input type="button" class="btn btn-primary" id="delete"
+                                                    value="선택한 파일 삭제" style="position: absolute; right:0">
+                                            </form>
+
+                                            <br><br>
+                                            <p id="data">로그를 추출한 source code의 확장자를 선택해 주세요. <br></p>
+                                            <select class="form-control input-sm" name="extension_type"
+                                                id="extension_type"
+                                                style="width : 200px; height : 35px; font-size:12px">
+                                                <option value=0>.py</option>
+                                                <option value=1>.java</option>
+                                                <option value=2 selected>확장자에 맞게(.py, .java)</option>
+                                            </select>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <!-- <div class="mb-4">
+                                <div class="card-body">
+                                    <form name="form" method="post">
+                                        <input type="button" class="btn btn-primary" id="execute" value="execute">
+                                    </form>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+            <main>
+                <div class="container-fluid">
+                    <!-- <h1 class="mt-4">HISTORY</h1> -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <p class="mb-0">
+                                <code>결과 </code> 목록입니다.
+
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <p class="mb-0" id="table">
+
+
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-body">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-2">
+                                        <div class="card-body" id="loglist">
+                                            
+                                            <textarea id="text_loglist" name="story" rows="20" cols="100" wrap="off" ></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-2">
+                                        <div class="card-body" id="success">
+                                            <textarea id="text_success" name="story" rows="20" cols="100" wrap="off" ></textarea>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="col-md-12">
+                            <div class="mb-2">
+                                <div class="card-body" id="fail">
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+
+            <footer class="py-4 bg-light mt-auto">
+            </footer>
+        </div>
+    </div>
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="/static/js/extract_log_by_source_code.js?ver=56"></script>
+<script src="/static/js/DragandDrop.js?ver=16"></script>
+<script src="/static/js/scripts.js?ver=31"></script>
+
+
+</html>

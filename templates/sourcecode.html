@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.5.0/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/highlight.js/9.5.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" type="text/css" href="/static/css/linenumber.css?ver=1" />
+    <!-- Line Number 적용 -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js"></script>
+    <script>hljs.initLineNumbersOnLoad();</script>
+
+</head>
+<body>
+    {% if java_content %}
+    <pre><code class="java">{% for line in java_content %}{{ line }}{% endfor %}</code></pre>
+    {% endif %}
+    {% if py_content %}
+    <pre><code class="python">{% for line in py_content %}{{ line }}{% endfor %}</code></pre>
+    {% endif %}
+
+</body>
+
+
+</html>

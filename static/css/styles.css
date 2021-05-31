@@ -1,0 +1,128 @@
+
+html {
+	font-family: sans-serif;
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  
+  article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+	display: block;
+  }
+  
+  body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #212529;
+	text-align: left;
+	background-color: #fff;
+  }
+  
+  [tabindex="-1"]:focus:not(:focus-visible) {
+	outline: 0 !important;
+  }
+  
+  hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+  }
+  
+  p {
+	margin-top: 0;
+	margin-bottom: 1rem;
+  }
+  ul {
+	list-style: none;
+	margin-left: 0;
+}
+
+div>div.nav-link:active {
+	color: #f1f1f1;
+}
+div>div.nav-link.active {
+	color: #f1f1f1;
+}
+
+ul>li>a {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	padding: 5px 10px;
+	background-color: #888;
+}
+
+ul>li:hover>a,
+ul>li:focus>a,
+ul>li:active>a,
+ul>li.active>a {
+	color: yellow;
+	background-color: #000;
+}
+
+/* #list
+{
+	overflow-y		: scroll;
+	width			: 400px;
+	height			: 600px;
+	margin			: 0;
+	padding			: 5px;
+	border			: 1px solid #ccc;
+	font-size		: 9pt;
+	font-family		: 'dotum', '돋움';
+}
+#list dt
+{
+	float			: left;
+	width			: 100px;
+	font-weight		: 700;
+}
+#list dd
+{
+	float			: left;
+	clear			: right;
+	width			: 270px;
+	margin			: 0;
+	margin-bottom	: 5px;
+}
+form
+{
+	width			: 400px;
+	padding			: 5px;
+	margin-top		: 5px;
+	border			: 1px solid #ffdd88;
+	background		: #ffffe3;
+	font-size		: 0;
+}
+form input#name
+{
+	width			: 90px;
+	margin-right	: 5px;
+	padding			: 2px;
+	border			: 1px solid #ccc;
+	font-size		: 9pt;
+	font-family		: 'dotum', '돋움';
+}
+form input#msg
+{
+	width			: 240px;
+	margin-right	: 5px;
+	padding			: 2px;
+	border			: 1px solid #ccc;
+	font-size		: 9pt;
+	font-family		: 'dotum', '돋움';
+}
+form input#btn
+{
+	width			: 48px;
+	font-size		: 9pt;
+	font-family		: 'dotum', '돋움';
+} */

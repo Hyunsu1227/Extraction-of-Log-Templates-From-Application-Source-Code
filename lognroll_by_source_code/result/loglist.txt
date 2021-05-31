@@ -1,0 +1,67 @@
+***********AbfsClient.java***********
+
+LOG.debug("Returning success response from rename idempotency logic");
+LOG.debug("Returning success response from append blob idempotency code");
+LOG.debug("Returning success response from delete idempotency logic");
+LOG.trace("Using cached SAS token.");
+LOG.trace("Initializing DelegatingSSLSocketFactory with {} SSL "+ "Channel Mode", this.abfsConfiguration.getPreferredSSLFactoryOption());
+LOG.trace("NonCritFailure: DelegatingSSLSocketFactory Init failed : "+ "{}", e.getMessage());
+LOG.trace("Rename source queryparam added {}", encodedRenameSource);
+LOG.trace("Fetch SAS token for {} on {}", operation, path);
+LOG.trace("SAS token fetch complete for {} on {}", operation, path);
+***********AbfsConfiguration.java***********
+
+LOG.trace("ClientCredsTokenProvider initialized");
+LOG.trace("UserPasswordTokenProvider initialized");
+LOG.trace("MsiTokenProvider initialized");
+LOG.trace("RefreshTokenBasedTokenProvider initialized");
+LOG.trace("Initializing {}", customTokenProviderClass.getName());
+LOG.trace("{} init complete", customTokenProviderClass.getName());
+LOG.trace("Initializing {}", sasTokenProviderClass.getName());
+LOG.trace("{} init complete", sasTokenProviderClass.getName());
+***********AbfsHttpHeader.java***********
+
+***********AbfsHttpOperation.java***********
+
+***********BackupImage.java***********
+
+LOG.info("Formatting ...");
+LOG.debug("Logs rolled while catching up to current segment");
+LOG.info("Stopped applying edits to prepare for checkpoint.");
+LOG.info("Waiting until the NameNode rolls its edit logs in order " +"to freeze the BackupNode namespace.");
+LOG.info("BackupNode namespace frozen.");
+LOG.info("Storage directory " + sd.getRoot() + " is not formatted.");
+LOG.trace("data:" + StringUtils.byteToHexString(data));
+LOG.warn("Unable to find stream starting with " + editLog.getCurSegmentTxId()+ ". This indicates that there is an error in synchronization in BackupImage");
+LOG.info("Successfully synced BackupNode with NameNode at txnid " +lastAppliedTxId);
+LOG.trace("Got journal, " +"state = " + bnState +"; firstTxId = " + firstTxId +"; numTxns = " + numTxns);
+LOG.info("Loading edits into backupnode to try to catch up from txid "+ lastAppliedTxId + " to " + target);
+LOG.info("Going to finish converging with remaining " + remainingTxns+ " txns from in-progress stream " + stream);
+LOG.debug("State transition " + bnState + " -> " + newState);
+***********context.py***********
+
+LOG.error('No cells are configured, unable to continue')
+LOG.exception('Error gathering result from cell %s', cell_uuid)
+LOG.warning('Timed out waiting for response from cell %s',cell_uuid)
+***********cyborg.py***********
+
+LOG.info('Binding ARQs.')
+LOG.info('Creating ARQs for device profile %s', dp_name)
+LOG.error('Failed to delete ARQs %s', arq_uuid_str)
+LOG.exception('%s: %s', err_msg, str(exc))
+***********manager.py***********
+
+***********policy.py***********
+
+LOG.exception('Policy not registered')
+LOG.warning("The user_id attribute isn't supported in the rule '%s'. ""All the user_id based policy enforcement will be removed in ""the future.",rule[0])
+LOG.debug('Policy check for %(action)s failed with scope check ''%(credentials)s',{'action': action,'credentials': context.to_policy_values()})
+LOG.debug('Policy check for %(action)s failed with credentials ''%(credentials)s',{'action': action,'credentials': context.to_policy_values()})
+LOG.warning("Start using the new action '%(new_policy)s'. ""The existing action '%(old_policy)s' is being deprecated ""and will be removed in future release.",{'new_policy': new_policy, 'old_policy': old_policy})
+***********wsgi.py***********
+
+LOG.info("Stopping WSGI server.")
+LOG.info("WSGI server has stopped.")
+LOG.error("Could not bind to %(host)s:%(port)s",{'host': host, 'port': port})
+LOG.info("%(name)s listening on %(host)s:%(port)s",{'name': self.name, 'host': self.host, 'port': self.port})
+LOG.error("Failed to start %(name)s on %(host)s:%(port)s with ""SSL support",{'name': self.name, 'host': self.host,'port': self.port})
